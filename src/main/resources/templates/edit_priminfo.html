@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Prim Calculation System</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Prim Calculation System</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/priminfo}">Client Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/priminfo}">Vehicle Info</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<div class = "container">
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> Update Client Info </h1>
+            <div class = "card-body">
+                <form th:action="@{/priminfo/{id} (id=${primInfo.id})}" th:object = "${primInfo}" method="POST">
+                    <div class ="form-group">
+                        <label> Client Name </label>
+                        <input
+                                type = "text"
+                         s       name = "name"
+                                th:field = "*{name}"
+                                class = "form-control"
+                                placeholder="Enter Name"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Client Age </label>
+                        <input
+                                type = "text"
+                                name = "age"
+                                th:field = "*{age}"
+                                class = "form-control"
+                                placeholder="Enter Age"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Client City </label>
+                        <input
+                                type = "text"
+                                name = "city"
+                                th:field = "*{city}"
+                                class = "form-control"
+                                placeholder="Enter City"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Client Income </label>
+                        <input
+                                type = "text"
+                                name = "income"
+                                th:field = "*{income}"
+                                class = "form-control"
+                                placeholder="Enter Income"
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Client License Age </label>
+                        <input
+                                type = "text"
+                                name = "licenseAge"
+                                th:field = "*{licenseAge}"
+                                class = "form-control"
+                                placeholder="Enter License Age"
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Client Accident Record</label>
+                        <input
+                                type = "text"
+                                name = "accidentRecord"
+                                th:field = "*{accidentRecord}"
+                                class = "form-control"
+                                placeholder="Enter Accident Record"
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Vehicle Brand </label>
+                        <input
+                                type = "text"
+                                name = "vehicleBrand"
+                                th:field = "*{vehicleBrand}"
+                                class = "form-control"
+                                placeholder="Enter VehicleBrand "
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Vehicle Plate </label>
+                        <input
+                                type = "text"
+                                name = "vehiclePlate"
+                                th:field = "*{vehiclePlate}"
+                                class = "form-control"
+                                placeholder="Enter Vehicle Plate "
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Vehicle Age</label>
+                        <input
+                                type = "text"
+                                name = "vehicleAge"
+                                th:field = "*{vehicleAge}"
+                                class = "form-control"
+                                placeholder="Enter Vehicle Age "
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Vehicle Accident Record </label>
+                        <input
+                                type = "text"
+                                name = "vehicleAccidentRecord"
+                                th:field = "*{vehicleAccidentRecord}"
+                                class = "form-control"
+                                placeholder="Enter Vehicle Accident Record"
+                        />
+                    </div>
+                    <div class ="form-group">
+                        <label> Vehicle Accident Value</label>
+                        <input
+                                type = "text"
+                                name = "vehicleAccidentValue"
+                                th:field = "*{vehicleAccidentValue}"
+                                class = "form-control"
+                                placeholder="Enter Vehicle Accident Value"
+                        />
+                    </div>
+                    <div class = "box-footer">
+                        <button type="submit" class = "btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
